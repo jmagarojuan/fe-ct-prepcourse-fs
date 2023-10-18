@@ -27,22 +27,23 @@ function agregarSimboloExclamacion(str) {
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
-   // Tu código:
-   return "nombre" + "apellido" 
+   // Tu código: 
+   var combinarNombres = nombre + " " + apellido;
+  return (combinarNombres)
 }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
-   var saludo = "hola";
-   return saludo + obtenerSaludo
+   
+   return "Hola "+ nombre +"!";
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
-   return (alto * ancho / 2);
+   return (alto * ancho);
 } 
 
 function retornarPerimetro(lado) {
@@ -70,14 +71,18 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   if (letra === "a")(letra === "e")(letra === "i")(letra === "o")(letra === "u");{
-      return "Es vocal";
-   } if (letra !== letra.length ){
-      return "Dato incorrecto"
-   } else {
-      return "Dato incorrecto"
-   }
-}
+      if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+         return "Es vocal"
+      } else (letra !== "a" .length ||letra !== "e" .length || letra !== "i".length || letra !== "o".length || letra !== "u".length)
+         return "Dato incorrecto";
+      }
+      
+      
+      
+   
+  
+   
+   
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
