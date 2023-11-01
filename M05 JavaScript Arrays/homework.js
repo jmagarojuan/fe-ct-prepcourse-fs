@@ -77,6 +77,8 @@ function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+    return arrayOfNums.reduce ((acumulador, numero) =>  acumulador + numero,0)
+     
     
    
 }
@@ -85,15 +87,23 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   
- 
+   var alfin = arrayOfNums[0];
+  for (var i = 1; i < arrayOfNums.length; i++) {
+    if (arrayOfNums[i] > alfin) {
+      alfin = arrayOfNums[i];
+    }
+  }
+  return alfin;
 }
+  
+
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
@@ -105,7 +115,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
-   return array.forEach(num => num > 18)
+   var alfin = 0
+  for (var i=0;i<array.length;i++){
+   if (array[i] > 18){
+   alfin++;
+  }
+  }
+  return alfin
 };
 
 function diaDeLaSemana(numeroDeDia) {
@@ -124,11 +140,7 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   if (num[0] === 9){
-      return true;
-   }else {
-      return false
-   };
+   
    
    
    
@@ -138,14 +150,26 @@ function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-    var array = array.every((igual)=> {
-      return array = igual
-    }
-      
-     
-   )
+ var alfin = array[0]
+  for (var i=1;i<array.length;i++){
+   if(alfin === array[i]){
+   return true
+   
+   }else {
+      return false;
+   }
+   } 
+
+  }
+
   
-}
+
+  
+
+     
+
+  
+
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
@@ -164,6 +188,9 @@ function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+    
+    
+      
 }
 
 /* ----------------------------------------------------------------------------------
