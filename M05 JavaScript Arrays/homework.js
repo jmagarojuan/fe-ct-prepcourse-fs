@@ -87,7 +87,12 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
-   
+  var suma = 0
+  for(let i=0;i<resultadosTest.length;i++){
+   suma+=resultadosTest[i]
+  }
+var promedio = suma/resultadosTest.length
+return promedio;
 }
 
 function numeroMasGrande(arrayOfNums) {
@@ -110,6 +115,9 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   
+   
+
 }
 
 function cuentoElementos(array) {
@@ -140,9 +148,11 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   
-   
-   
+    if (num === 9 || num >=90 && num <= 99){
+      return true
+    }else {
+      return false;
+    }
    
 }
 
@@ -162,20 +172,12 @@ function todosIguales(array) {
 
   }
 
-  
-
-  
-
-     
-
-  
-
-
-function mesesDelAño(array) {
+  function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+
 }
 
 function tablaDelSeis() {
@@ -188,8 +190,11 @@ function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-    
-    
+   var nuevo = array.filter((num)=> {
+      if (num > 100){
+         return nuevo
+      }});
+   
       
 }
 
