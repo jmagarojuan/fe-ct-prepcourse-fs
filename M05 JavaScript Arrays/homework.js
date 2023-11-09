@@ -115,10 +115,18 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   
-   
-
-}
+   var producto = 1
+   if (arguments.length === 0){
+      return 0
+   }else if (arguments.length === 1){
+      return arguments[0]
+   }else {
+      
+      for(let i=0;i<arguments.length;i++){
+         producto *= arguments[i]
+      }
+   }return producto
+ }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -177,23 +185,43 @@ function todosIguales(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   var meses =[];
+   for (let i=0; i<array.length ;i++){
+      if(array[i] === "Enero" || array[i] === "Marzo" || array[i]=== "Noviembre"){
+         meses.push(array[i]);
+      }
+      } if (meses.length === 3){
+         return meses
+       } else {
+      return "No se encontraron los meses pedidos";
+       }
+  }
+  
 
-}
-
+  
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var tabla =[];
+   for(let i=0;i<=10;i++){
+       tabla.push(6*i)
+   } return tabla
+   
+
 }
+
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-   var nuevo = array.filter((num)=> {
-      if (num > 100){
-         return nuevo
-      }});
+  var mayores = []
+  for (let i=0;i<array.length;i++){
+   if (100 < array[i]){
+      mayores.push(array[i])
+   }
+  }return mayores
    
       
 }
@@ -209,7 +237,26 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var resultado= []
+   for (var i = 0; i < 10; i++) {
+      num += 2;
+      resultado.push(num);
+  
+      if (num === i) {
+        break;
+      }
+    }
+  
+    if (resultado.length < 10) {
+      return "Se interrumpió la ejecución";
+    }
+  
+    return resultado;
+
 }
+
+
+
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -218,6 +265,20 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var resultado=[]
+  
+   for(var i=0 ;i<10 ; i++){
+      
+      if(i === 4){
+       
+         continue;
+         
+      }
+      num += 2
+      resultado.push(num)
+     
+   }
+   return resultado
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
