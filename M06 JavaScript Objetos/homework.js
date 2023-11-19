@@ -78,8 +78,11 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-  
-
+ if(objetoUsuario.email != undefined){
+   return true;
+ } else  {
+   return false;
+ }
  
           
    
@@ -129,12 +132,20 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como true.
    // Retornar el arreglo.
    // Tu código:
-   for(var esPremium in objetoMuchosUsuarios){
-      if (esPremium === objetoMuchosUsuarios[esPremium]){
-         return true
-      }
+  for(var i=0; i< objetoMuchosUsuarios.length ; i++){
+   objetoMuchosUsuarios[i].esPremium = true;
+  } return objetoMuchosUsuarios;
+    
    }
-}
+     
+      
+
+      
+
+      
+     
+     
+
 
 function sumarLikesDeUsuario(objetoUsuario) {
    // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
@@ -142,6 +153,13 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
+   var numero= 0
+   for(var i=0;i<objetoUsuario.posts.length;i++){
+       var numeros =objetoUsuario.posts[i]
+      numero += numeros.likes
+   } return numero
+
+   
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
@@ -155,6 +173,13 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
+
+   objetoProducto.calcularPrecioDescuento = function(){
+      var multiplicar = objetoProducto.precio * objetoProducto.porcentajeDeDescuento
+      return objetoProducto.precio - multiplicar
+      
+   }  
+  return objetoProducto
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
